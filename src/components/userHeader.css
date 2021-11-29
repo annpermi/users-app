@@ -1,0 +1,52 @@
+/* Card header */
+.card_header {
+  flex-wrap: nowrap;
+  align-items: center;
+  display: flex;
+}
+
+.card_header_left {
+  margin-right: 12px;
+  flex-grow: 1;
+  overflow: hidden;
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+}
+
+.card_header_left img {
+  width: 70px;
+  height: 70px;
+  padding-right: 16px;
+}
+
+.card_header_left p {
+  font-size: 10px;
+  color: #4a4a4a;
+  margin: 6px 0;
+}
+
+.card_header_left .name {
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.card_header_left .email {
+  color: #7e7e7e;
+}
+
+/* Card header right */
+.card_header_right {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #7e7e7e;
+}
+
+.card_header_right img {
+  width: 39px;
+  height: 39px;
+  filter: invert(52%) sepia(0%) saturate(522%) hue-rotate(216deg)
+    brightness(94%) contrast(94%);
+}

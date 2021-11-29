@@ -1,0 +1,19 @@
+/* Card main */
+.card_main {
+  margin: auto;
+  width: 269px;
+}
+
+.card_main div {
+  margin: 10px 0;
+}
+
+.card_main p {
+  font-size: 10px;
+  color: #4a4a4a;
+  margin: 3px 0;
+}
+
+.card_main p:first-child {
+  font-weight: 800;
+}

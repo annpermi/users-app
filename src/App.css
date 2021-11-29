@@ -3,17 +3,21 @@
   margin: 10px;
 }
 
-.app_container {
+.wrapper {
   width: 500px;
   margin: auto;
   background-color: #eaeef2;
   border: 1px solid rgba(0, 0, 0, 0.08);
   box-shadow: -1px 4px 20px -6px rgb(0 0 0 / 20%);
+  -webkit-box-shadow: -1px 4px 20px -6px rgb(0 0 0 / 20%);
+  -moz-box-shadow: -1px 4px 20px -6px rgb(0 0 0 / 20%);
   border: 1px solid rgb(53 53 53 / 23%);
 }
 
+/* Header */
 header {
   height: 64px;
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;

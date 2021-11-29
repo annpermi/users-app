@@ -9,6 +9,7 @@ function App() {
   const [users, setUsers] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
+  /* Api */
   const getUsers = () => {
     axios
       .get("users.json")
@@ -23,14 +24,12 @@ function App() {
   useEffect(() => {
     // setTimeout(() => {
     getUsers();
-    // }, 2000);
+    // }, 5000);
   }, []);
-
-  console.log(users);
 
   return (
     <div className="container">
-      <div className="app_container">
+      <div className="wrapper">
         <header>
           <img src="/icons/group.svg" alt="users" />
           <p>Users</p>
