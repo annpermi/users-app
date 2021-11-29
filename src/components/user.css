@@ -1,0 +1,67 @@
+.card {
+  padding: 12px 16px;
+  margin: 12px;
+  background-color: white;
+  border-radius: 5px;
+  /* -webkit-box-shadow: 0px 0px 20px -7px rgba(117, 117, 117, 1);
+  -moz-box-shadow: 0px 0px 20px -7px rgba(117, 117, 117, 1); */
+  box-shadow: -1px 4px 20px -6px rgb(0 0 0 / 20%);
+  border: 1px solid rgb(53 53 53 / 23%);
+}
+
+.card_container {
+  flex-wrap: nowrap;
+  align-items: center;
+  display: flex;
+  height: 80px;
+}
+
+.user {
+  margin-right: 12px;
+  flex-grow: 1;
+  overflow: hidden;
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+}
+
+.user img {
+  width: 70px;
+  height: 70px;
+  padding-right: 16px;
+}
+
+.user_description p {
+  font-size: 10px;
+  margin: 6px;
+}
+
+.user_description_name {
+  font-size: 14px;
+  font-weight: 700;
+  color: #4a4a4a;
+}
+
+.user_description_email {
+  color: #7e7e7e;
+}
+
+.user_card_button {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #7e7e7e;
+}
+
+.user_card_button img {
+  width: 39px;
+  height: 39px;
+  filter: invert(52%) sepia(0%) saturate(522%) hue-rotate(216deg)
+    brightness(94%) contrast(94%);
+}
+
+.user_info {
+  margin: auto;
+  width: 258px;
+}
