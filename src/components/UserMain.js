@@ -34,7 +34,8 @@ export default UserInfo;
 
 const getDate = (dataStr) => {
   const date = new Date(dataStr);
-  const time = date.toLocaleString("en-US", { timeZone: "EST" }); // "1:01:00 AM"
+  const time = date.toLocaleString();
+  return time;
 };
 
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
