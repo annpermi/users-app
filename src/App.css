@@ -1,5 +1,4 @@
 .container {
-  /* height: 80vh; */
   margin: 10px;
 }
 
@@ -12,6 +11,8 @@
   -webkit-box-shadow: -1px 4px 20px -6px rgb(0 0 0 / 20%);
   -moz-box-shadow: -1px 4px 20px -6px rgb(0 0 0 / 20%);
   border: 1px solid rgb(53 53 53 / 23%);
+  min-height: 90vh;
+  min-width: 300px;
 }
 
 /* Header */

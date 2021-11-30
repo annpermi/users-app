@@ -9,18 +9,19 @@ const colorHandleForUserIcon = (role) => {
   const grey =
     "invert(51%) sepia(0%) saturate(0%) hue-rotate(283deg) brightness(96%) contrast(91%)";
 
-  if (role === "Administrator") {
-    return blue;
-  } else if (role === "User") {
-    return green;
-  } else {
-    return grey;
+  switch (role) {
+    case "Administrator":
+      return blue;
+    case "User":
+      return green;
+    default:
+      return grey;
   }
 };
 
-const UserHeader = ({ user, handleExpandClick, expanded }) => {
-  console.log({ user });
-  const { id, firstName, lastName, role, email } = user;
+const UserHeader = ({ userData, isExpanded }) => {
+  const { id, firstName, lastName, role, email } = userData;
+
   return (
     <div className="card_header">
       <div className="card_header_left">
@@ -39,13 +40,11 @@ const UserHeader = ({ user, handleExpandClick, expanded }) => {
           <p className="email">{email}</p>
         </div>
       </div>
-      <button
-        id={id}
-        className="card_header_right"
-        onClick={(e) => handleExpandClick(e.currentTarget.id, user)}
-      >
+      <button id={id} className="card_header_right">
         <img
-          src={!expanded ? "/icons/expand_more.svg" : "/icons/expand_less.svg"}
+          src={
+            !isExpanded ? "/icons/expand_more.svg" : "/icons/expand_less.svg"
+          }
           alt="user"
         />
       </button>

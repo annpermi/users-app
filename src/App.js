@@ -8,6 +8,7 @@ import "../public/icons/group.svg";
 function App() {
   const [users, setUsers] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [selectedIds, setSelectedIds] = useState({});
 
   /* Api */
   const getUsers = () => {
@@ -27,6 +28,29 @@ function App() {
     // }, 5000);
   }, []);
 
+  const addSelectedIds = (id) => {
+    if (selectedIds.hasOwnProperty(id)) {
+      selectedIds[id] = !selectedIds[id];
+    } else {
+      selectedIds[id] = true;
+    }
+    setSelectedIds({ ...selectedIds });
+  };
+
+  const userList = users.map((userData) => {
+    const { id } = userData;
+    const isExpanded = selectedIds.hasOwnProperty(id) && selectedIds[id];
+
+    return (
+      <User
+        key={id}
+        userData={userData}
+        isExpanded={isExpanded}
+        addSelectedIds={addSelectedIds}
+      />
+    );
+  });
+
   return (
     <div className="container">
       <div className="wrapper">
@@ -34,7 +58,7 @@ function App() {
           <img src="/icons/group.svg" alt="users" />
           <p>Users</p>
         </header>
-        <main>{isLoading ? <CircularProgress /> : <User users={users} />}</main>
+        <main>{isLoading ? <CircularProgress /> : userList}</main>
       </div>
     </div>
   );

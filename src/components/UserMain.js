@@ -4,7 +4,6 @@ import "./userMain.css";
 const UserInfo = ({ selectedUser }) => {
   const { city, street, state, zip, phone, createdAt, lastLoggedIn } =
     selectedUser;
-  console.log({ selectedUser });
   return (
     <div className="card_main">
       <div>
@@ -35,7 +34,7 @@ export default UserInfo;
 
 const getDate = (dataStr) => {
   const date = new Date(dataStr);
-  const time = date.toLocaleTimeString("en-US"); // "1:01:00 AM"
+  const time = date.toLocaleString("en-US", { timeZone: "EST" }); // "1:01:00 AM"
 };
 
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
