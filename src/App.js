@@ -23,9 +23,7 @@ function App() {
   };
 
   useEffect(() => {
-    // setTimeout(() => {
     getUsers();
-    // }, 5000);
   }, []);
 
   const addSelectedIds = (id) => {
@@ -40,7 +38,6 @@ function App() {
   const userList = users.map((userData) => {
     const { id } = userData;
     const isExpanded = selectedIds.hasOwnProperty(id) && selectedIds[id];
-
     return (
       <User
         key={id}
