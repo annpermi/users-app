@@ -45,8 +45,8 @@
 }
 
 .card_header_right img {
-  width: 39px;
-  height: 39px;
+  width: 33px;
+  height: 33px;
   filter: invert(52%) sepia(0%) saturate(522%) hue-rotate(216deg)
     brightness(94%) contrast(94%);
 }
