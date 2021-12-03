@@ -9,7 +9,6 @@ function App() {
   const [users, setUsers] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [selectedIds, setSelectedIds] = useState({});
-  console.log({ selectedIds });
 
   /* Api */
   const getUsers = () => {
