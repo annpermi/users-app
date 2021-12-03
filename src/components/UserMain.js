@@ -1,7 +1,7 @@
 import React from "react";
 import "./userMain.css";
 
-const UserInfo = ({ selectedUser }) => {
+const UserMain = ({ selectedUser }) => {
   const { city, street, state, zip, phone, createdAt, lastLoggedIn } =
     selectedUser;
 
@@ -45,4 +45,4 @@ const UserInfo = ({ selectedUser }) => {
   );
 };
 
-export default UserInfo;
+export default UserMain;
